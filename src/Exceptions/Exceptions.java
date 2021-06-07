@@ -11,7 +11,7 @@ public class Exceptions {
         }else {
             System.out.println("...");
         }
-//Здесь так же
+//Здесь так же, либо через Optional
         String str = null;
         if (str != null) {
             str.equals(str);
