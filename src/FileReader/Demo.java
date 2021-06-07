@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.Scanner;
 
 public class Demo {
-    public static String read(String path) throws IOException {
+    public static String read(String path){
 //открываем файл по пути
         try {
             BufferedReader reader = new BufferedReader(new FileReader(path));
@@ -25,7 +25,7 @@ public class Demo {
 
         }
     }
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args){
         System. out .println( read ( "C:\\test.txt" ));
     }
 }
