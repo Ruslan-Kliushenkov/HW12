@@ -6,8 +6,7 @@ import java.util.Scanner;
 public class Demo {
     public static String read(String path){
 
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader(path));
+        try(BufferedReader reader = new BufferedReader(new FileReader(path))) {
             StringBuilder stringBuilder = new StringBuilder();
             String currentString;
 
@@ -15,14 +14,12 @@ public class Demo {
                 stringBuilder.append(currentString);
                 stringBuilder.append(" \n ");
             }
-
-            reader.close();
-
             return stringBuilder.toString();
+        } catch (FileNotFoundException f){
+            return f.getMessage();
         } catch (IOException e) {
             e.printStackTrace();
             return e.getMessage();
-
         }
     }
     public static void main(String[] args){
