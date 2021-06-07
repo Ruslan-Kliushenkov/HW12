@@ -20,7 +20,6 @@ public class Demo {
 //возвращаем вычитанный текст в строке
             return stringBuilder.toString();
         } catch (IOException e) {
-            e.printStackTrace();
             return e.getMessage();
 
         }
